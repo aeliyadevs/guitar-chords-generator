@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.chord-item {
+  width: 180px;
+  max-height: 250px;
+  overflow: hidden;
+  padding: 10px;
+  .chord-label {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  .chord-diagram {
+    width: 100%;
+    height: 100%;
+    background: #412d26;
+    position: relative;
+    .frets {
+      display: flex;
+      flex-direction: column;
+      border-top: 4px solid black;
+      .fret {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        .fret-marker {
+          width: 12px;
+          height: 12px;
+          border-radius: 12px;
+          border: 2px solid #d6d0d0;
+          position: absolute;
+        }
+        .chord-note {
+          width: 18px;
+          height: 18px;
+          border-radius: 18px;
+          background: #ff5b5b;
+          position: absolute;
+          z-index: 10;
+        }
+        .note-1 {
+          left: 67px;
+        }
+        .note-2 {
+          left: 100px;
+        }
+        .note-3 {
+          left: 132px;
+        }
+        .fret-wire {
+          width: 100%;
+          height: 2px;
+          background: #cbcbcb;
+          position: absolute;
+          top: 0;
+        }
+      }
+    }
+    .strings {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      box-sizing: border-box;
+      padding: 0 6px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      .string {
+        width: 2px;
+        height: 100%;
+        background: #e9ded8;
+      }
+      .string-thin {
+        width: 1px;
+        height: 100%;
+        background: #e9ded8;
+      }
+      .string-E {
+        width: 4px;
+      }
+    }
+  }
+}
